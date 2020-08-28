@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+li {
+  text-align: justify;
+}
+
+#root .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right:0;
+  margin-left: 0;
+}
+
+a.cartButton {
+  margin: 10px;
+  float: right;
+}
+
+.header {
+  padding: 20px;
+  background: #007bff70;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
