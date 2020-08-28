@@ -106,7 +106,7 @@ function PDPItem(){
                                             </div>
                                         </div>
                                         <button>
-                                            <Link to={`/Cart`}>Buy</Link>
+                                            <Link to={`/Cart`}>Add to Cart</Link>
                                         </button>
                                         <button>
                                             <Link to="/Category">Back to Category</Link>
