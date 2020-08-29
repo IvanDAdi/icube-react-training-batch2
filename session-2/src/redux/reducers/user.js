@@ -1,27 +1,24 @@
 const initalState = {
-  register:[]
+  user: []
 };
-  
-  const userReducer = (state = initalState, action) => {
-    const { type, payload } = action;
-    switch (type) {
-      case "LOGIN":
-        return {
-          ...state,
-          user: payload
-        };
-      case "REGISTER":
-        return {
-          ...state,
-          register: [
-            ...state.register,
-            payload,
-          ]
-        };
-      default:
-        return state;
-    }
-  };
-  
-  export default userReducer;
-  
+
+const userReducer = (state = initalState, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case 'GET_USER':
+      return state.user;
+
+    case "REGISTER":
+      return {
+        ...state,
+        user: [
+          ...state.user,
+          payload,
+      ]
+      };
+    default:
+      return state;
+  }
+};
+
+export default userReducer;

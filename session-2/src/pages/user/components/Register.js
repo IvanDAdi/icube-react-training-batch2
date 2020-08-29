@@ -33,11 +33,10 @@ const Register = ({ setOpen }) => {
         onSubmit: (values ,{resetForm}) => {
             setId(generateId + 1);
             const value = {
-                id:generateId,
                 fullname:values.fullname, 
                 email:values.email, 
                 password:values.password, 
-                telepon:values.telepon
+                telepon:values.phoneNumber
             }
             dispatch(register(value))
             resetForm({values:''});
