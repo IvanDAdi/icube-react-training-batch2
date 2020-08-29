@@ -19,8 +19,7 @@ const Register = ({ setOpen }) => {
       .required("password is required"),
     phoneNumber: Yup.string()
     .min(12,'Phone Number to short')
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .required("Phone Number is required"),
+    .matches(phoneRegExp, 'Phone number is not valid'),
   });
   const formRegister = useFormik({
     initialValues: {
@@ -36,7 +35,7 @@ const Register = ({ setOpen }) => {
                 fullname:values.fullname, 
                 email:values.email, 
                 password:values.password, 
-                telepon:values.phoneNumber
+                phoneNumber:values.phoneNumber
             }
             dispatch(register(value))
             resetForm({values:''});
